@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Forms Review</title>
+  </head>
+  <body>
+    <section id="overlay">
+      <img src="https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" alt="Davie's Burgers Logo" id="logo">
+      <hr>
+      <form action="submission.html" method="POST"> <!--<form> 的目的是允许用户输入信息并发送它。<form> 的 action 属性决定了表单信息的去向。-->
+				<h1>Create a burger!</h1>
+        <section class="protein">
+          <label for="patty">What type of protein would you like?</label>
+    			<input type="text" name="patty" id="patty">
+        </section>
+        <hr>
+        
+        <section class="patties">
+          <label for="amount">How many patties would you like?</label>
+          <input type="number" name="amount" id="amount">
+          <!--下设置type为"number"为数字输入创建单行字段。-->
+        </section>
+        <hr>
+        
+        <section class="cooked">
+          <label for="doneness">How do you want your patty cooked</label>
+          <br>
+          <span>Rare</span>
+          <input type="range" name="doneness" id="doneness" value="3" min="1" max="5">
+          <span>Well-Done</span><!--设置type为"range"创建一个滑块以从一系列数字中进行选择。-->
+        </section>
+        <hr>
+        
+        <section class="toppings">
+          <span>What toppings would you like?</span>
+          <br>
+          <input type="checkbox" name="topping" id="lettuce" value="lettuce">
+          <!--设置type为"checkbox"创建一个可以与其他复选框配对的复选框。-->
+          <label for="lettuce">Lettuce</label>
+          <input type="checkbox" name="topping" id="tomato" value="tomato">
+          <label for="tomato">Tomato</label>
+          <input type="checkbox" name="topping" id="onion" value="onion">
+          <label for="onion">Onion</label>
+        </section>
+        <hr>
+        
+        <section class="cheesy">
+          <span>Would you like to add cheese?</span>
+          <br>
+          <input type="radio" name="cheese" id="yes" value="yes">
+          <!--设置type为"radio"创建一个可以与其他单选按钮配对的单选按钮-->
+          <label for="yes">Yes</label>
+          <input type="radio" name="cheese" id="no" value="yes">
+          <label for="no">No</label>
+        </section>
+        <hr>
+       
+        <section class="bun-type">
+          <label for="bun">What type of bun would you like?</label>
+          <select name="bun" id="bun"> <!--<select>元素填充有元素<option>并呈现下拉列表选择。-->
+            <option value="sesame">Sesame</option>
+            <option value="potatoe">Potato</option>
+            <option value="pretzel">Pretzel</option>
+          </select>
+        </section>
+        <hr>
+        
+        <section class="sauce-selection">
+          <label for="sauce">What type of sauce would you like?</label>
+          <input list="sauces" id="sauce" name="sauce">
+
+          <datalist id="sauces"> <!--元素由<datalist>元素填充<option>并与 an 一起使用<input>以搜索选项。-->
+            <option value="ketchup"></option>
+            <option value="mayo"></option>
+            <option value="mustard"></option>
+          </datalist>
+        </section>
+        <hr>
+        <section class="extra-info">
+          <label for="extra">Anything else you want to add?</label>
+          <br>
+          <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+          <!--<textarea>元素是具有可自定义区域的文本输入字段。-->
+        </section>
+        <hr>
+
+        <section class="submission"><!--设置type为"submit"创建提交按钮。-->
+          <input type="submit" value="Submit">
+        </section>
+      </form>
+    </section>
+  </body>
+</html>
