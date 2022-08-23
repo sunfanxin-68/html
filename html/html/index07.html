@@ -14,10 +14,15 @@
         <label for="username">Username:</label>
         <br>
 				<input id="username" name="username" type="text" required minlength="3" maxlength="15">
+                <!--将required属性添加到输入相关元素将验证输入字段中是否包含信息
+                minlength maxlength 最低输入多少位数和最多 
+                pattern 为
+            -->
+
         <br>
         <label for="pw">Password:</label>
         <br>
-        <!--Add the pattern attribute to the input below-->
+        
 				<input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
         <br>
         <input type="submit" value="Submit">
