@@ -20,9 +20,9 @@ const getUserChoice = userInput => {  //用const来创建玩家可使用的函�
   
    }
   }; 
-  console.log(getComputerChoice()); 
+  console.log(getComputerChoice()); //创建一个名为的函数determineWinner
   const determineWinner = (userChoice, computerChoice) => {
-    if (userChoice === computerChoice) {
+    if (userChoice === computerChoice) { //这个函数将比较两个玩家的选择，然后return是人类玩家赢、输还是平局。
       return 'The game is a tie!';
     }
     if (userChoice === 'rock') {
@@ -52,16 +52,16 @@ const getUserChoice = userInput => {  //用const来创建玩家可使用的函�
   console.log(determineWinner('paper', 'scissors'));
   console.log(determineWinner('paper', 'paper'));
   
-  const playGame = () => {
-    const userChoice = getUserChoice('scissors');
-     const computerChoice = getComputerChoice();
-      console.log('You threw: ' + userChoice);
+  const playGame = () => { //该变量等于调用的结果getUserChoice()，传入'rock','paper'或'scissors'作为参数。
+    const userChoice = getUserChoice('scissors'); //在playGame()函数内部，创建一个名为userChoiceset 的变量
+     const computerChoice = getComputerChoice(); //创建另一个名为 的变量computerChoice，并将其设置为等于调用的结果getComputerChoice()。
+      console.log('You threw: ' + userChoice); 
       // console.log('You threw ${userChoice}');
     console.log('The computer threw:' + computerChoice);
   
-    console.log(determineWinner(userChoice,computerChoice));
+    console.log(determineWinner(userChoice,computerChoice));////在playGame()函数内部，调用determineWinner()函数。
   };
-  playGame();
+  playGame(); //调用playGame()程序最后一行的函数。
   
   
   

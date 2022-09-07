@@ -11,6 +11,9 @@ const callMyNightSky = () => {
 console.log(callMyNightSky());
 console.log(stars);
 
+
+
+
 const logVisibleLightWaves = () => {
     const lightWaves = 'Moonlight';
     console.log(lightWaves);
